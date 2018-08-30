@@ -1,5 +1,5 @@
 'use strict';
- 
+
 window.onload = function() {
 	let msElem = document.getElementById('milliseconds'),
 		secElem = document.getElementById('seconds'),
@@ -44,15 +44,16 @@ window.onload = function() {
 	};
 
 	clearTimer.onclick = function(e){
-		msElem.innerHTML = addPrefix(0,3);;
-		secElem.innerHTML = addPrefix(0,2);;
-		minElem.innerHTML = addPrefix(0,2);;
-		hrElem.innerHTML = addPrefix(0,2);;
+		msElem.innerHTML = addPrefix(0,3);
+		secElem.innerHTML = addPrefix(0,2);
+		minElem.innerHTML = addPrefix(0,2);
+		hrElem.innerHTML = addPrefix(0,2);
 	};
 
 	function addPrefix(number, len) {
 		let delta = len - number.toString().length;
 		let strNum ='';
+		
 		for (var i = 0; i < delta; i++) {
 			strNum += '0';
 		}
